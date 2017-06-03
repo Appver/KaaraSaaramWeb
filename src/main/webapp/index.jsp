@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
   <title>KaaraSaaram</title>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/signin.css">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -204,6 +209,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
+      	<li><a href="#" data-toggle="modal" data-target="#signmodal">SIGN IN/SIGN UP</a></li>
         <li><a href="#survey">SURVEY</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#services">SERVICES</a></li>
@@ -228,30 +234,116 @@
   </form>
 </div>
 
+<!-- Modal -->
+  <div class="modal fade" id="signmodal" role="dialog"  tabindex = "-1" aria-labelledby = "signlabel" aria-hidden = "true">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+     <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id = "signlabel">Sign in/Sign up</h4>
+        </div>
+	    <div class="modal-body">
+	    		<div class="row">
+		            <div class="col-md-6">
+		            	<div class="row">
+		            		<span> Sign In</span>
+		            	</div>
+		            	<div class="row">
+		            		<div class="container">
+								 <form>
+								    <div class="row">
+								    	<div class="col-md-3"><label><b>Username</b></label></div>
+								      	<div class="col-md-3"><input type="text" placeholder="Enter Username" name="uname" required></div>
+								    </div>
+									<div class="row">
+										<div class="col-md-3"><label><b>Password</b></label></div>
+										<div class="col-md-3"><input type="password" placeholder="Enter Password" name="psw" required></div>
+									</div>
+									<div class="row">
+										<div class="col-md-3"><button type="submit">Login</button></div>
+										<div class="col-md-3"><input type="checkbox" checked="checked"> Remember me</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+							      			<button type="button" onclick="" class="cancelbtn">Cancel</button>
+							      			<span class="psw">Forgot <a href="#">password?</a></span>
+							    		</div>
+									</div>
+								</form>
+							</div>
+		            	</div>
+		            </div>
+		            <div class="col-md-6">
+		            	<div class="row">
+		            		<span> Sign Up</span>
+		            	</div>
+		            	<div class="row">
+		            		<div class="container">
+								<div class="container-fluid">
+								    <div class="row">
+										<div class="sicon">
+											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+												<div class="icon-circle">
+													<a href="#" class="ifacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+												</div>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+												<div class="icon-circle">
+													<a href="#" class="itwittter" title="Twitter"><i class="fa fa-twitter"></i></a>
+												</div>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+												<div class="icon-circle">
+													<a href="#" class="igoogle" title="Google+"><i class="fa fa-google-plus"></i></a>
+												</div>
+											</div>
+											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+												<div class="icon-circle">
+													<a href="#" class="iLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+		            	</div>
+		            </div>
+		        </div>
+	    </div>
+        <div class="modal-footer">
+        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+	</div>
+ 	</div>
+ </div>
+
+
 <!-- Container (Survey Section) -->
 <div id="survey" class="container-fluid text-center">
   <div class="row">
     <div class="col-sm-8">
       <h2>Survey</h2><br>
       <h4>Survey helps to bring people favor food and all time choice should not skip from our menu chart</p>
-      <br><button class="btn btn-default btn-lg" data-toggle="modal" data-target="#takeasurvey">Take A Survey</button>
+      <br><button class="btn btn-default btn-lg" data-toggle="modal tooltip" data-target="#takeasurvey"
+      title = "Take a Survey and get 30 &#3065 (rupa) credits to your wallet account">Take A Survey</button>
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-signal logo"></span>
     </div>
   </div>
 </div>
-
+	
 
 <!-- Modal -->
-  <div class="modal fade" id="takeasurvey" role="dialog">
+  <div class="modal fade" id="takeasurvey" role="dialog"  tabindex = "-1" aria-labelledby = "takeasurveyLabel" aria-hidden = "true">
     <div class="modal-dialog modal-lg">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Food Survey</h4>
+          <h4 class="modal-title" id = "takeasurveyLabel">Food Survey</h4>
         </div>
 	    <div class="modal-body">
 	    	<div class="container-fluid text-center">
@@ -560,6 +652,9 @@ $(document).ready(function(){
     });
   });
 })
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
 </script>
 
 </body>
