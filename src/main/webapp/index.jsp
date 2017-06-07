@@ -34,6 +34,16 @@
       font-weight: 400;
       margin-bottom: 30px;
   }  
+  .modal {
+   position: absolute;
+   top: 60px;
+   right: 100px;
+   bottom: 0;
+   left: 0;
+   z-index: 10040;
+   overflow: auto;
+   overflow-y: auto;
+}
   .jumbotron {
       background-color: #f4511e;
       color: #fff;
@@ -244,72 +254,59 @@
           <h4 class="modal-title" id = "signlabel">Sign in/Sign up</h4>
         </div>
 	    <div class="modal-body">
-	    		<div class="row">
-		            <div class="col-md-6">
-		            	<div class="row">
-		            		<span> Sign In</span>
-		            	</div>
-		            	<div class="row">
-		            		<div class="container">
-								 <form>
-								    <div class="row">
-								    	<div class="col-md-3"><label><b>Username</b></label></div>
-								      	<div class="col-md-3"><input type="text" placeholder="Enter Username" name="uname" required></div>
-								    </div>
-									<div class="row">
-										<div class="col-md-3"><label><b>Password</b></label></div>
-										<div class="col-md-3"><input type="password" placeholder="Enter Password" name="psw" required></div>
+	    <ul class="nav nav-tabs">
+						<li class="active"><a data-toggle="tab" href="#login">Login</a></li>
+						<li><a data-toggle="tab" href="#register">Register</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="login" class="tab-pane fade in active">
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label  class="col-sm-2 control-label" for="inputEmail3">Email</label>
+									<div class="col-sm-10"> <input type="email" class="form-control" id="inputEmail3" placeholder="Email"/> </div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="inputPassword3" >Password</label>
+									<div class="col-sm-10"><input type="password" class="form-control" id="inputPassword3" placeholder="Password"/></div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<div class="checkbox"><label><input type="checkbox"/> Remember me</label></div>
 									</div>
-									<div class="row">
-										<div class="col-md-3"><button type="submit">Login</button></div>
-										<div class="col-md-3"><input type="checkbox" checked="checked"> Remember me</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="submit" class="btn btn-default">Sign in</button>
 									</div>
-									<div class="row">
-										<div class="col-md-6">
-							      			<button type="button" onclick="" class="cancelbtn">Cancel</button>
-							      			<span class="psw">Forgot <a href="#">password?</a></span>
-							    		</div>
+								</div>
+							</form>
+						</div>
+						<div id="register" class="tab-pane fade">
+							<div class="row">
+								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+									<div class="icon-circle">
+										<a href="#" class="ifacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
 									</div>
-								</form>
-							</div>
-		            	</div>
-		            </div>
-		            <div class="col-md-6">
-		            	<div class="row">
-		            		<span> Sign Up</span>
-		            	</div>
-		            	<div class="row">
-		            		<div class="container">
-								<div class="container-fluid">
-								    <div class="row">
-										<div class="sicon">
-											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
-												<div class="icon-circle">
-													<a href="#" class="ifacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
-												</div>
-											</div>
-											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
-												<div class="icon-circle">
-													<a href="#" class="itwittter" title="Twitter"><i class="fa fa-twitter"></i></a>
-												</div>
-											</div>
-											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
-												<div class="icon-circle">
-													<a href="#" class="igoogle" title="Google+"><i class="fa fa-google-plus"></i></a>
-												</div>
-											</div>
-											<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
-												<div class="icon-circle">
-													<a href="#" class="iLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-												</div>
-											</div>
-										</div>
+								</div>
+								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+									<div class="icon-circle">
+										<a href="#" class="itwittter" title="Twitter"><i class="fa fa-twitter"></i></a>
+									</div>
+								</div>
+								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+									<div class="icon-circle">
+										<a href="#" class="igoogle" title="Google+"><i class="fa fa-google-plus"></i></a>
+									</div>
+								</div>
+								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+									<div class="icon-circle">
+										<a href="#" class="iLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
 									</div>
 								</div>
 							</div>
-		            	</div>
-		            </div>
-		        </div>
+						</div>
+					</div>
+	    		
 	    </div>
         <div class="modal-footer">
         	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
