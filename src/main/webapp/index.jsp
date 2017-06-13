@@ -15,6 +15,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
   <style>
+  .login-separator {
+  	border-right: 1px dashed #333;
+  }
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
@@ -248,69 +251,61 @@
   <div class="modal fade" id="signmodal" role="dialog"  tabindex = "-1" aria-labelledby = "signlabel" aria-hidden = "true">
     <div class="modal-dialog modal-lg">
       <!-- Modal content-->
-     <div class="modal-content">
+			<div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title" id = "signlabel">Sign in/Sign up</h4>
         </div>
-	    <div class="modal-body">
-	    <ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#login">Login</a></li>
-						<li><a data-toggle="tab" href="#register">Register</a></li>
-					</ul>
-					<div class="tab-content">
-						<div id="login" class="tab-pane fade in active">
-							<form class="form-horizontal" role="form">
-								<div class="form-group">
-									<label  class="col-sm-2 control-label" for="inputEmail3">Email</label>
-									<div class="col-sm-10"> <input type="email" class="form-control" id="inputEmail3" placeholder="Email"/> </div>
+				<div class="modal-body">
+					<div style="padding:15px;" class="col-sm-6 col-md-6 col-lg-6">
+						<form class="form-horizontal" role="form">
+							<div class="form-group row">
+								<label  class="col-sm-2 col-md-2 col-lg-2 control-label" for="inputEmail3">Email</label>
+								<div class="col-sm-10 col-md-10 col-lg-10"> <input type="email" class="form-control" id="inputEmail3" placeholder="Email"/> </div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-2 col-md-2 col-lg-2 control-label" for="inputPassword3" >Password</label>
+								<div class="col-sm-10 col-md-10 col-lg-10"><input type="password" class="form-control" id="inputPassword3" placeholder="Password"/></div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-offset-2 col-sm-10 col-md-offset-2 col-lg-10 col-lg-offset-2 col-md-10">
+									<div class="checkbox"><label><input type="checkbox"/> Remember me</label></div>
 								</div>
-								<div class="form-group">
-									<label class="col-sm-2 control-label" for="inputPassword3" >Password</label>
-									<div class="col-sm-10"><input type="password" class="form-control" id="inputPassword3" placeholder="Password"/></div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-offset-2 col-sm-10 col-md-offset-2 col-lg-10 col-lg-offset-2 col-md-10">
+									<button type="submit" class="btn btn-default">Sign in</button>
 								</div>
-								<div class="form-group">
-									<div class="col-sm-offset-2 col-sm-10">
-										<div class="checkbox"><label><input type="checkbox"/> Remember me</label></div>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-offset-2 col-sm-10">
-										<button type="submit" class="btn btn-default">Sign in</button>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div id="register" class="tab-pane fade">
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-1 col-md-1 col-lg-1 login-separator">
+					</div>
+						<div class="col-sm-5 col-md-5 col-lg-5" style="padding:20px;">
 							<div class="row">
-								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
 									<div class="icon-circle">
 										<a href="#" class="ifacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
 									</div>
 								</div>
-								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
 									<div class="icon-circle">
 										<a href="#" class="itwittter" title="Twitter"><i class="fa fa-twitter"></i></a>
 									</div>
 								</div>
-								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
 									<div class="icon-circle">
 										<a href="#" class="igoogle" title="Google+"><i class="fa fa-google-plus"></i></a>
 									</div>
 								</div>
-								<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3 text-center">
+								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
 									<div class="icon-circle">
 										<a href="#" class="iLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-	    		
 	    </div>
-        <div class="modal-footer">
-        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
 	</div>
  	</div>
  </div>
